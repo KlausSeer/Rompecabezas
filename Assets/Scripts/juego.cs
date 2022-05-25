@@ -54,13 +54,19 @@ public class juego : MonoBehaviour
         }             
         if (PiezasEncajadas == PiezasCount)
         {
-            MenuGanar.SetActive(true);
+            Ganar();
         }
     }
 
     public void Perder()
     {
         MenuPerder.SetActive(true);
+    }
+
+    public void Ganar()
+    {
+        FindObjectOfType<Timer>().won = true;
+        MenuGanar.SetActive(true);
     }
 
     public void SiguienteNivel()
