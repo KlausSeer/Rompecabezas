@@ -12,7 +12,7 @@ public class pieza : MonoBehaviour
     void Start()
     {
         PosicionCorrecta = transform.position;
-        transform.position = new Vector3(Random.Range(-1.0f, 6.0f), Random.Range(-1.5f, -9.0f));
+        transform.position = new Vector3(Random.Range(-1.0f, 6.0f), Random.Range(-3.0f, -9.0f));
     }
     
     void Update()

@@ -9,6 +9,7 @@ public class juego : MonoBehaviour
     public Sprite[] Niveles;
     public int PiezasCount = 36;
     public GameObject MenuGanar;
+    public GameObject MenuPerder;
     public GameObject PiezaSeleccionada;
     int capa = 1;    
     public int PiezasEncajadas = 0;
@@ -56,6 +57,12 @@ public class juego : MonoBehaviour
             MenuGanar.SetActive(true);
         }
     }
+
+    public void Perder()
+    {
+        MenuPerder.SetActive(true);
+    }
+
     public void SiguienteNivel()
     {
         if(PlayerPrefs.GetInt("Nivel")<Niveles.Length-1)
